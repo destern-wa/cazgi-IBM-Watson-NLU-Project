@@ -1,6 +1,7 @@
 import './bootstrap.min.css';
 import './App.css';
 import EmotionTable from './EmotionTable.js';
+import SentimentTable from './SentimentTable.js';
 import React from 'react';
 
 class App extends React.Component {
@@ -69,7 +70,7 @@ class App extends React.Component {
                         default: color = "#fcba03"; // yellow
                     }
                     output = <div style={{ color: color, fontSize: 20 }}>{output}</div>
-                    this.setState({sentimentOutput: output})
+                    this.setState({sentimentOutput: <SentimentTable sentiment={output}/>})
                 })
             } catch (err) {
                 this.showErrorMessage(err.message);
