@@ -7,6 +7,12 @@ class EmotionTable extends React.Component {
       return (  
         <div>
           <table className="table table-bordered">
+              <thead>
+                  <tr>
+                    <th>Emotion</th>
+                    <th>Confidence level</th>
+                  </tr>
+              </thead>
             <tbody>
             {
                   Object.entries(this.props.emotions).map(function(emotion) {
